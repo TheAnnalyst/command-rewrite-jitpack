@@ -16,7 +16,7 @@ import java.util.function.Supplier;
 import static java.util.Objects.requireNonNull;
 
 /**
- * Runs one of a selection of commands, either using a selector and a key->command mapping, or a
+ * Runs one of a selection of commands, either using a selector and a key-to-command mapping, or a
  * supplier that returns the command directly at runtime.  Does not actually schedule the selected
  * command - rather, the command is run through this command; this ensures that the command will
  * behave as expected if used as part of a CommandGroup.  Requires the requirements of all included
