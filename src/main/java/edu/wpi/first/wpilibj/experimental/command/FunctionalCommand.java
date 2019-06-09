@@ -35,7 +35,8 @@ public class FunctionalCommand extends SendableCommandBase {
   public FunctionalCommand(Runnable onInit,
                            Runnable onExecute,
                            Consumer<Boolean> onEnd,
-                           BooleanSupplier isFinished) {
+                           BooleanSupplier isFinished,
+                           Subsystem... requirements) {
     requireNonNull(onInit);
     requireNonNull(onExecute);
     requireNonNull(onEnd);
@@ -45,6 +46,8 @@ public class FunctionalCommand extends SendableCommandBase {
     m_onExecute = onExecute;
     m_onEnd = onEnd;
     m_isFinished = isFinished;
+
+    addRequirements(requirements);
   }
 
   @Override
