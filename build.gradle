@@ -1,0 +1,63 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'maven'
+    id "edu.wpi.first.GradleRIO" version "2019.3.2"
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name = "GradleRio"
+        url = "http://dev.imjac.in/maven"
+    }
+
+    maven { url "https://plugins.gradle.org/m2/" }
+
+    jcenter()
+}
+
+dependencies {
+    compile wpi.deps.wpilib()
+    compile wpi.deps.vendor.java()
+    nativeZip wpi.deps.vendor.jni(wpi.platforms.roborio)
+    nativeDesktopZip wpi.deps.vendor.jni(wpi.platforms.desktop)
+
+    simulation rootProject.files('libs/halsim_ds_socketd.dll')
+    simulation "edu.wpi.first.halsim:halsim_ds_socket:${wpi.wpilibVersion}:${wpi.platforms.desktop}@zip"
+    simulation "edu.wpi.first.halsim:halsim_ds_socket:${wpi.wpilibVersion}:${wpi.platforms.desktop}debug@zip"
+}
+
+/* Utils */
+clean {
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+task genJavadoc(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+task deleteDocs(type: Delete) {
+    delete '../docs'
+    followSymlinks = false
+}
+
+task copyDocs(type: Copy, dependsOn: [genJavadoc, deleteDocs]) {
+    from 'build/docs/javadoc'
+    into '../docs'
+}
+
+artifacts {
+    archives sourcesJar
+    archives genJavadoc
+}
+
+compileJava {
+    options.compilerArgs << '-parameters'
+}
+
