@@ -27,10 +27,11 @@ public class FunctionalCommand extends SendableCommandBase {
   /**
    * Creates a new FunctionalCommand.
    *
-   * @param onInit     the function to run on command initialization
-   * @param onExecute  the function to run on command execution
-   * @param onEnd      the function to run on command end
-   * @param isFinished the function that determines whether the command has finished
+   * @param onInit       the function to run on command initialization
+   * @param onExecute    the function to run on command execution
+   * @param onEnd        the function to run on command end
+   * @param isFinished   the function that determines whether the command has finished
+   * @param requirements the subsystems required by this command
    */
   public FunctionalCommand(Runnable onInit,
                            Runnable onExecute,
