@@ -24,8 +24,8 @@ public class InstantCommand extends SendableCommandBase {
    * @param requirements the subsystems required by this command
    */
   public InstantCommand(Runnable toRun, Subsystem... requirements) {
-    requireNonNull(toRun);
-    m_toRun = toRun;
+    m_toRun = requireNonNull(toRun);
+
     addRequirements(requirements);
   }
 

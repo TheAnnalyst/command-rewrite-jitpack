@@ -28,8 +28,7 @@ public class RunCommand extends SendableCommandBase {
    * @param requirements the subsystems to require
    */
   public RunCommand(Runnable toRun, Subsystem... requirements) {
-    requireNonNull(toRun);
-    m_toRun = toRun;
+    m_toRun = requireNonNull(toRun);
     addRequirements(requirements);
   }
 

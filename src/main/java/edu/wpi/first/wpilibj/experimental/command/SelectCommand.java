@@ -16,7 +16,7 @@ import java.util.function.Supplier;
 import static java.util.Objects.requireNonNull;
 
 /**
- * Runs one of a selection of commands, either using a selector and a key-to-command mapping, or a
+ * Runs one of a selection of commands, either using a selector and a key->command mapping, or a
  * supplier that returns the command directly at runtime.  Does not actually schedule the selected
  * command - rather, the command is run through this command; this ensures that the command will
  * behave as expected if used as part of a CommandGroup.  Requires the requirements of all included
@@ -73,8 +73,8 @@ public class SelectCommand extends SendableCommandBase {
   public void initialize() {
     if (m_selector != null) {
       if (!m_commands.keySet().contains(m_selector.get())) {
-        m_selectedCommand = new PrintCommand("SelectCommand selector value does not correspond to"
-            + " any command!");
+        m_selectedCommand = new PrintCommand(
+            "SelectCommand selector value does not correspond to" + " any command!");
         return;
       }
       m_selectedCommand = m_commands.get(m_selector.get());
@@ -101,6 +101,14 @@ public class SelectCommand extends SendableCommandBase {
 
   @Override
   public boolean runsWhenDisabled() {
-    return m_selectedCommand.runsWhenDisabled();
+    if (m_commands != null) {
+      boolean runsWhenDisabled = true;
+      for (Command command : m_commands.values()) {
+        runsWhenDisabled &= command.runsWhenDisabled();
+      }
+      return runsWhenDisabled;
+    } else {
+      return m_toRun.get().runsWhenDisabled();
+    }
   }
 }

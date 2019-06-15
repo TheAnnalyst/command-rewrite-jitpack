@@ -10,6 +10,7 @@ package edu.wpi.first.wpilibj.experimental.command;
 import java.util.function.BooleanSupplier;
 
 import static edu.wpi.first.wpilibj.experimental.command.CommandGroupBase.requireUngrouped;
+import static java.util.Objects.requireNonNull;
 
 /**
  * Runs one of two commands, depending on the value of the given condition when this command is
@@ -44,7 +45,7 @@ public class ConditionalCommand extends SendableCommandBase {
 
     m_onTrue = onTrue;
     m_onFalse = onFalse;
-    m_condition = condition;
+    m_condition = requireNonNull(condition);
     m_requirements.addAll(m_onTrue.getRequirements());
     m_requirements.addAll(m_onFalse.getRequirements());
   }
@@ -76,6 +77,6 @@ public class ConditionalCommand extends SendableCommandBase {
 
   @Override
   public boolean runsWhenDisabled() {
-    return m_selectedCommand.runsWhenDisabled();
+    return m_onTrue.runsWhenDisabled() && m_onFalse.runsWhenDisabled();
   }
 }

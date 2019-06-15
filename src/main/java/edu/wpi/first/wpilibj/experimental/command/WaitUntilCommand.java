@@ -12,6 +12,8 @@ import edu.wpi.first.wpilibj.Timer;
 
 import java.util.function.BooleanSupplier;
 
+import static java.util.Objects.requireNonNull;
+
 /**
  * A command that does nothing but ends after a specified match time or condition.  Useful for
  * CommandGroups.
@@ -25,7 +27,7 @@ public class WaitUntilCommand extends SendableCommandBase {
    * @param condition the condition to determine when to end
    */
   public WaitUntilCommand(BooleanSupplier condition) {
-    m_condition = condition;
+    m_condition = requireNonNull(condition);
   }
 
   /**

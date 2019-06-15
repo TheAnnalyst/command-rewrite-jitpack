@@ -30,10 +30,9 @@ public class StartEndCommand extends SendableCommandBase {
    * @param requirements the subsystems required by this command
    */
   public StartEndCommand(Runnable onInit, Runnable onEnd, Subsystem... requirements) {
-    requireNonNull(onInit);
-    requireNonNull(onEnd);
-    m_onInit = onInit;
-    m_onEnd = onEnd;
+    m_onInit = requireNonNull(onInit);
+    m_onEnd = requireNonNull(onEnd);
+
     addRequirements(requirements);
   }
 

@@ -33,20 +33,12 @@ public class FunctionalCommand extends SendableCommandBase {
    * @param isFinished   the function that determines whether the command has finished
    * @param requirements the subsystems required by this command
    */
-  public FunctionalCommand(Runnable onInit,
-                           Runnable onExecute,
-                           Consumer<Boolean> onEnd,
-                           BooleanSupplier isFinished,
-                           Subsystem... requirements) {
-    requireNonNull(onInit);
-    requireNonNull(onExecute);
-    requireNonNull(onEnd);
-    requireNonNull(isFinished);
-
-    m_onInit = onInit;
-    m_onExecute = onExecute;
-    m_onEnd = onEnd;
-    m_isFinished = isFinished;
+  public FunctionalCommand(Runnable onInit, Runnable onExecute, Consumer<Boolean> onEnd,
+                           BooleanSupplier isFinished, Subsystem... requirements) {
+    m_onInit = requireNonNull(onInit);
+    m_onExecute = requireNonNull(onExecute);
+    m_onEnd = requireNonNull(onEnd);
+    m_isFinished = requireNonNull(isFinished);
 
     addRequirements(requirements);
   }
