@@ -49,7 +49,7 @@ task deleteDocs(type: Delete) {
 
 task copyDocs(type: Copy, dependsOn: [genJavadoc, deleteDocs]) {
     from 'build/docs/javadoc'
-    into '../docs'
+    into './docs'
 }
 
 artifacts {
