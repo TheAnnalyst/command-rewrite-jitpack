@@ -223,8 +223,12 @@ public final class CommandScheduler extends SendableBase {
       Command command = iterator.next();
 
       if (!command.runsWhenDisabled() && RobotState.isDisabled()) {
+        command.end(true);
+        for (Consumer<Command> action : m_interruptActions) {
+          action.accept(command);
+        }
+        m_requirements.keySet().removeAll(command.getRequirements());
         iterator.remove();
-        cancel(command);
         continue;
       }
 

@@ -7,12 +7,10 @@
 
 package edu.wpi.first.wpilibj.experimental.command;
 
-import edu.wpi.first.wpilibj.command.IllegalUseOfCommandException;
-
-import java.util.Collections;
 import java.util.Map;
 import java.util.function.Supplier;
 
+import static edu.wpi.first.wpilibj.experimental.command.CommandGroupBase.requireUngrouped;
 import static java.util.Objects.requireNonNull;
 
 /**
@@ -42,9 +40,7 @@ public class SelectCommand extends SendableCommandBase {
    * @param selector the selector to determine which command to run
    */
   public SelectCommand(Map<Object, Command> commands, Supplier<Object> selector) {
-    if (!Collections.disjoint(CommandGroupBase.getGroupedCommands(), commands.values())) {
-      throw new IllegalUseOfCommandException("Commands cannot be added to multiple CommandGroups");
-    }
+    requireUngrouped(commands.values());
 
     CommandGroupBase.registerGroupedCommands(commands.values().toArray(new Command[]{}));
 

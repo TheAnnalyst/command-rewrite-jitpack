@@ -9,6 +9,7 @@ package edu.wpi.first.wpilibj.experimental.command;
 
 import edu.wpi.first.wpilibj.command.IllegalUseOfCommandException;
 
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Set;
 import java.util.WeakHashMap;
@@ -55,7 +56,17 @@ public abstract class CommandGroupBase extends SendableCommandBase implements Co
    * @param commands The commands to check
    */
   public static void requireUngrouped(Command... commands) {
-    if (!Collections.disjoint(Set.of(commands), getGroupedCommands())) {
+    requireUngrouped(Set.of(commands));
+  }
+
+  /**
+   * Requires that the specified commands not have been already allocated to a CommandGroup.
+   *   Throws an {@link IllegalUseOfCommandException} if commands have been allocated.
+   *
+   * @param commands The commands to check
+   */
+  public static void requireUngrouped(Collection<Command> commands) {
+    if (!Collections.disjoint(commands, getGroupedCommands())) {
       throw new IllegalUseOfCommandException(
           "Commands cannot be added to more than one CommandGroup");
     }
