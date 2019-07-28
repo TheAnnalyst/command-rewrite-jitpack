@@ -116,7 +116,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!-- ======== START OF CLASS DATA ======== -->
 <main role="main">
 <div class="header">
-<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">edu.wpi.first.wpilibj.experimental.command</a></div>
+<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">edu.wpi.first.wpilibj.frc2.command</a></div>
 <h2 title="Class CommandGroupBase" class="title">Class CommandGroupBase</h2>
 </div>
 <div class="contentContainer">
@@ -124,10 +124,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li><a href="SendableCommandBase.html" title="class in edu.wpi.first.wpilibj.experimental.command">edu.wpi.first.wpilibj.experimental.command.SendableCommandBase</a></li>
+<li><a href="SendableCommandBase.html" title="class in edu.wpi.first.wpilibj.frc2.command">edu.wpi.first.wpilibj.frc2.command.SendableCommandBase</a></li>
 <li>
 <ul class="inheritance">
-<li>edu.wpi.first.wpilibj.experimental.command.CommandGroupBase</li>
+<li>edu.wpi.first.wpilibj.frc2.command.CommandGroupBase</li>
 </ul>
 </li>
 </ul>
@@ -138,16 +138,16 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="Command.html" title="interface in edu.wpi.first.wpilibj.experimental.command">Command</a></code>, <code>edu.wpi.first.wpilibj.Sendable</code></dd>
+<dd><code><a href="Command.html" title="interface in edu.wpi.first.wpilibj.frc2.command">Command</a></code>, <code>edu.wpi.first.wpilibj.Sendable</code></dd>
 </dl>
 <dl>
 <dt>Direct Known Subclasses:</dt>
-<dd><code><a href="ParallelCommandGroup.html" title="class in edu.wpi.first.wpilibj.experimental.command">ParallelCommandGroup</a></code>, <code><a href="ParallelDeadlineGroup.html" title="class in edu.wpi.first.wpilibj.experimental.command">ParallelDeadlineGroup</a></code>, <code><a href="ParallelRaceGroup.html" title="class in edu.wpi.first.wpilibj.experimental.command">ParallelRaceGroup</a></code>, <code><a href="SequentialCommandGroup.html" title="class in edu.wpi.first.wpilibj.experimental.command">SequentialCommandGroup</a></code></dd>
+<dd><code><a href="ParallelCommandGroup.html" title="class in edu.wpi.first.wpilibj.frc2.command">ParallelCommandGroup</a></code>, <code><a href="ParallelDeadlineGroup.html" title="class in edu.wpi.first.wpilibj.frc2.command">ParallelDeadlineGroup</a></code>, <code><a href="ParallelRaceGroup.html" title="class in edu.wpi.first.wpilibj.frc2.command">ParallelRaceGroup</a></code>, <code><a href="SequentialCommandGroup.html" title="class in edu.wpi.first.wpilibj.frc2.command">SequentialCommandGroup</a></code></dd>
 </dl>
 <hr>
 <pre>public abstract class <span class="typeNameLabel">CommandGroupBase</span>
-extends <a href="SendableCommandBase.html" title="class in edu.wpi.first.wpilibj.experimental.command">SendableCommandBase</a>
-implements <a href="Command.html" title="interface in edu.wpi.first.wpilibj.experimental.command">Command</a></pre>
+extends <a href="SendableCommandBase.html" title="class in edu.wpi.first.wpilibj.frc2.command">SendableCommandBase</a>
+implements <a href="Command.html" title="interface in edu.wpi.first.wpilibj.frc2.command">Command</a></pre>
 <div class="block">A base for CommandGroups.  Statically tracks commands that have been allocated to groups
  to ensure those commands are not also used independently, which can result in inconsistent
  command state and unpredictable execution.</div>
@@ -165,10 +165,10 @@ implements <a href="Command.html" title="interface in edu.wpi.first.wpilibj.expe
 </a>
 <h3>Field Summary</h3>
 <ul class="blockList">
-<li class="blockList"><a id="fields.inherited.from.class.edu.wpi.first.wpilibj.experimental.command.SendableCommandBase">
+<li class="blockList"><a id="fields.inherited.from.class.edu.wpi.first.wpilibj.frc2.command.SendableCommandBase">
 <!--   -->
 </a>
-<h3>Fields inherited from class&nbsp;edu.wpi.first.wpilibj.experimental.command.<a href="SendableCommandBase.html" title="class in edu.wpi.first.wpilibj.experimental.command">SendableCommandBase</a></h3>
+<h3>Fields inherited from class&nbsp;edu.wpi.first.wpilibj.frc2.command.<a href="SendableCommandBase.html" title="class in edu.wpi.first.wpilibj.frc2.command">SendableCommandBase</a></h3>
 <code><a href="SendableCommandBase.html#m_name">m_name</a>, <a href="SendableCommandBase.html#m_requirements">m_requirements</a>, <a href="SendableCommandBase.html#m_subsystem">m_subsystem</a></code></li>
 </ul>
 </li>
@@ -211,12 +211,12 @@ implements <a href="Command.html" title="interface in edu.wpi.first.wpilibj.expe
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>abstract void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addCommands(edu.wpi.first.wpilibj.experimental.command.Command...)">addCommands</a></span>&#8203;(<a href="Command.html" title="interface in edu.wpi.first.wpilibj.experimental.command">Command</a>...&nbsp;commands)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addCommands(edu.wpi.first.wpilibj.frc2.command.Command...)">addCommands</a></span>&#8203;(<a href="Command.html" title="interface in edu.wpi.first.wpilibj.frc2.command">Command</a>...&nbsp;commands)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#clearGroupedCommand(edu.wpi.first.wpilibj.experimental.command.Command)">clearGroupedCommand</a></span>&#8203;(<a href="Command.html" title="interface in edu.wpi.first.wpilibj.experimental.command">Command</a>&nbsp;command)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#clearGroupedCommand(edu.wpi.first.wpilibj.frc2.command.Command)">clearGroupedCommand</a></span>&#8203;(<a href="Command.html" title="interface in edu.wpi.first.wpilibj.frc2.command">Command</a>&nbsp;command)</code></th>
 <td class="colLast">
 <div class="block">Removes a single command from the list of grouped commands, allowing it to be freely
  used again.</div>
@@ -230,48 +230,48 @@ implements <a href="Command.html" title="interface in edu.wpi.first.wpilibj.expe
 </td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code>static <a href="CommandGroupBase.html" title="class in edu.wpi.first.wpilibj.experimental.command">CommandGroupBase</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deadline(edu.wpi.first.wpilibj.experimental.command.Command,edu.wpi.first.wpilibj.experimental.command.Command...)">deadline</a></span>&#8203;(<a href="Command.html" title="interface in edu.wpi.first.wpilibj.experimental.command">Command</a>&nbsp;deadline,
-        <a href="Command.html" title="interface in edu.wpi.first.wpilibj.experimental.command">Command</a>...&nbsp;commands)</code></th>
+<td class="colFirst"><code>static <a href="CommandGroupBase.html" title="class in edu.wpi.first.wpilibj.frc2.command">CommandGroupBase</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deadline(edu.wpi.first.wpilibj.frc2.command.Command,edu.wpi.first.wpilibj.frc2.command.Command...)">deadline</a></span>&#8203;(<a href="Command.html" title="interface in edu.wpi.first.wpilibj.frc2.command">Command</a>&nbsp;deadline,
+        <a href="Command.html" title="interface in edu.wpi.first.wpilibj.frc2.command">Command</a>...&nbsp;commands)</code></th>
 <td class="colLast">
-<div class="block">Factory method for <a href="ParallelDeadlineGroup.html" title="class in edu.wpi.first.wpilibj.experimental.command"><code>ParallelDeadlineGroup</code></a>, included for brevity/convenience.</div>
+<div class="block">Factory method for <a href="ParallelDeadlineGroup.html" title="class in edu.wpi.first.wpilibj.frc2.command"><code>ParallelDeadlineGroup</code></a>, included for brevity/convenience.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
-<td class="colFirst"><code>static <a href="CommandGroupBase.html" title="class in edu.wpi.first.wpilibj.experimental.command">CommandGroupBase</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#parallel(edu.wpi.first.wpilibj.experimental.command.Command...)">parallel</a></span>&#8203;(<a href="Command.html" title="interface in edu.wpi.first.wpilibj.experimental.command">Command</a>...&nbsp;commands)</code></th>
+<td class="colFirst"><code>static <a href="CommandGroupBase.html" title="class in edu.wpi.first.wpilibj.frc2.command">CommandGroupBase</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#parallel(edu.wpi.first.wpilibj.frc2.command.Command...)">parallel</a></span>&#8203;(<a href="Command.html" title="interface in edu.wpi.first.wpilibj.frc2.command">Command</a>...&nbsp;commands)</code></th>
 <td class="colLast">
-<div class="block">Factory method for <a href="ParallelCommandGroup.html" title="class in edu.wpi.first.wpilibj.experimental.command"><code>ParallelCommandGroup</code></a>, included for brevity/convenience.</div>
+<div class="block">Factory method for <a href="ParallelCommandGroup.html" title="class in edu.wpi.first.wpilibj.frc2.command"><code>ParallelCommandGroup</code></a>, included for brevity/convenience.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code>static <a href="CommandGroupBase.html" title="class in edu.wpi.first.wpilibj.experimental.command">CommandGroupBase</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#race(edu.wpi.first.wpilibj.experimental.command.Command...)">race</a></span>&#8203;(<a href="Command.html" title="interface in edu.wpi.first.wpilibj.experimental.command">Command</a>...&nbsp;commands)</code></th>
+<td class="colFirst"><code>static <a href="CommandGroupBase.html" title="class in edu.wpi.first.wpilibj.frc2.command">CommandGroupBase</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#race(edu.wpi.first.wpilibj.frc2.command.Command...)">race</a></span>&#8203;(<a href="Command.html" title="interface in edu.wpi.first.wpilibj.frc2.command">Command</a>...&nbsp;commands)</code></th>
 <td class="colLast">
-<div class="block">Factory method for <a href="ParallelRaceGroup.html" title="class in edu.wpi.first.wpilibj.experimental.command"><code>ParallelRaceGroup</code></a>, included for brevity/convenience.</div>
+<div class="block">Factory method for <a href="ParallelRaceGroup.html" title="class in edu.wpi.first.wpilibj.frc2.command"><code>ParallelRaceGroup</code></a>, included for brevity/convenience.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>static void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#requireUngrouped(edu.wpi.first.wpilibj.experimental.command.Command...)">requireUngrouped</a></span>&#8203;(<a href="Command.html" title="interface in edu.wpi.first.wpilibj.experimental.command">Command</a>...&nbsp;commands)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#requireUngrouped(edu.wpi.first.wpilibj.frc2.command.Command...)">requireUngrouped</a></span>&#8203;(<a href="Command.html" title="interface in edu.wpi.first.wpilibj.frc2.command">Command</a>...&nbsp;commands)</code></th>
 <td class="colLast">
 <div class="block">Requires that the specified commands not have been already allocated to a CommandGroup.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
-<td class="colFirst"><code>static <a href="CommandGroupBase.html" title="class in edu.wpi.first.wpilibj.experimental.command">CommandGroupBase</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sequence(edu.wpi.first.wpilibj.experimental.command.Command...)">sequence</a></span>&#8203;(<a href="Command.html" title="interface in edu.wpi.first.wpilibj.experimental.command">Command</a>...&nbsp;commands)</code></th>
+<td class="colFirst"><code>static <a href="CommandGroupBase.html" title="class in edu.wpi.first.wpilibj.frc2.command">CommandGroupBase</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sequence(edu.wpi.first.wpilibj.frc2.command.Command...)">sequence</a></span>&#8203;(<a href="Command.html" title="interface in edu.wpi.first.wpilibj.frc2.command">Command</a>...&nbsp;commands)</code></th>
 <td class="colLast">
-<div class="block">Factory method for <a href="SequentialCommandGroup.html" title="class in edu.wpi.first.wpilibj.experimental.command"><code>SequentialCommandGroup</code></a>, included for brevity/convenience.</div>
+<div class="block">Factory method for <a href="SequentialCommandGroup.html" title="class in edu.wpi.first.wpilibj.frc2.command"><code>SequentialCommandGroup</code></a>, included for brevity/convenience.</div>
 </td>
 </tr>
 </table>
 <ul class="blockList">
-<li class="blockList"><a id="methods.inherited.from.class.edu.wpi.first.wpilibj.experimental.command.SendableCommandBase">
+<li class="blockList"><a id="methods.inherited.from.class.edu.wpi.first.wpilibj.frc2.command.SendableCommandBase">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;edu.wpi.first.wpilibj.experimental.command.<a href="SendableCommandBase.html" title="class in edu.wpi.first.wpilibj.experimental.command">SendableCommandBase</a></h3>
-<code><a href="SendableCommandBase.html#addRequirements(edu.wpi.first.wpilibj.experimental.command.Subsystem...)">addRequirements</a>, <a href="SendableCommandBase.html#getName()">getName</a>, <a href="SendableCommandBase.html#getRequirements()">getRequirements</a>, <a href="SendableCommandBase.html#getSubsystem()">getSubsystem</a>, <a href="SendableCommandBase.html#initSendable(edu.wpi.first.wpilibj.smartdashboard.SendableBuilder)">initSendable</a>, <a href="SendableCommandBase.html#setName(java.lang.String)">setName</a>, <a href="SendableCommandBase.html#setSubsystem(java.lang.String)">setSubsystem</a></code></li>
+<h3>Methods inherited from class&nbsp;edu.wpi.first.wpilibj.frc2.command.<a href="SendableCommandBase.html" title="class in edu.wpi.first.wpilibj.frc2.command">SendableCommandBase</a></h3>
+<code><a href="SendableCommandBase.html#addRequirements(edu.wpi.first.wpilibj.frc2.command.Subsystem...)">addRequirements</a>, <a href="SendableCommandBase.html#getName()">getName</a>, <a href="SendableCommandBase.html#getRequirements()">getRequirements</a>, <a href="SendableCommandBase.html#getSubsystem()">getSubsystem</a>, <a href="SendableCommandBase.html#initSendable(edu.wpi.first.wpilibj.smartdashboard.SendableBuilder)">initSendable</a>, <a href="SendableCommandBase.html#setName(java.lang.String)">setName</a>, <a href="SendableCommandBase.html#setSubsystem(java.lang.String)">setSubsystem</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
@@ -281,11 +281,11 @@ implements <a href="Command.html" title="interface in edu.wpi.first.wpilibj.expe
 <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
 </ul>
 <ul class="blockList">
-<li class="blockList"><a id="methods.inherited.from.class.edu.wpi.first.wpilibj.experimental.command.Command">
+<li class="blockList"><a id="methods.inherited.from.class.edu.wpi.first.wpilibj.frc2.command.Command">
 <!--   -->
 </a>
-<h3>Methods inherited from interface&nbsp;edu.wpi.first.wpilibj.experimental.command.<a href="Command.html" title="interface in edu.wpi.first.wpilibj.experimental.command">Command</a></h3>
-<code><a href="Command.html#alongWith(edu.wpi.first.wpilibj.experimental.command.Command...)">alongWith</a>, <a href="Command.html#andThen(edu.wpi.first.wpilibj.experimental.command.Command...)">andThen</a>, <a href="Command.html#asProxy()">asProxy</a>, <a href="Command.html#beforeStarting(java.lang.Runnable)">beforeStarting</a>, <a href="Command.html#cancel()">cancel</a>, <a href="Command.html#deadlineWith(edu.wpi.first.wpilibj.experimental.command.Command...)">deadlineWith</a>, <a href="Command.html#end(boolean)">end</a>, <a href="Command.html#execute()">execute</a>, <a href="Command.html#getName()">getName</a>, <a href="Command.html#getRequirements()">getRequirements</a>, <a href="Command.html#hasRequirement(edu.wpi.first.wpilibj.experimental.command.Subsystem)">hasRequirement</a>, <a href="Command.html#initialize()">initialize</a>, <a href="Command.html#interruptOn(java.util.function.BooleanSupplier)">interruptOn</a>, <a href="Command.html#isFinished()">isFinished</a>, <a href="Command.html#isScheduled()">isScheduled</a>, <a href="Command.html#perpetually()">perpetually</a>, <a href="Command.html#raceWith(edu.wpi.first.wpilibj.experimental.command.Command...)">raceWith</a>, <a href="Command.html#runsWhenDisabled()">runsWhenDisabled</a>, <a href="Command.html#schedule()">schedule</a>, <a href="Command.html#schedule(boolean)">schedule</a>, <a href="Command.html#whenFinished(java.lang.Runnable)">whenFinished</a>, <a href="Command.html#withTimeout(double)">withTimeout</a></code></li>
+<h3>Methods inherited from interface&nbsp;edu.wpi.first.wpilibj.frc2.command.<a href="Command.html" title="interface in edu.wpi.first.wpilibj.frc2.command">Command</a></h3>
+<code><a href="Command.html#alongWith(edu.wpi.first.wpilibj.frc2.command.Command...)">alongWith</a>, <a href="Command.html#andThen(edu.wpi.first.wpilibj.frc2.command.Command...)">andThen</a>, <a href="Command.html#asProxy()">asProxy</a>, <a href="Command.html#beforeStarting(java.lang.Runnable)">beforeStarting</a>, <a href="Command.html#cancel()">cancel</a>, <a href="Command.html#deadlineWith(edu.wpi.first.wpilibj.frc2.command.Command...)">deadlineWith</a>, <a href="Command.html#end(boolean)">end</a>, <a href="Command.html#execute()">execute</a>, <a href="Command.html#getName()">getName</a>, <a href="Command.html#getRequirements()">getRequirements</a>, <a href="Command.html#hasRequirement(edu.wpi.first.wpilibj.frc2.command.Subsystem)">hasRequirement</a>, <a href="Command.html#initialize()">initialize</a>, <a href="Command.html#interruptOn(java.util.function.BooleanSupplier)">interruptOn</a>, <a href="Command.html#isFinished()">isFinished</a>, <a href="Command.html#isScheduled()">isScheduled</a>, <a href="Command.html#perpetually()">perpetually</a>, <a href="Command.html#raceWith(edu.wpi.first.wpilibj.frc2.command.Command...)">raceWith</a>, <a href="Command.html#runsWhenDisabled()">runsWhenDisabled</a>, <a href="Command.html#schedule()">schedule</a>, <a href="Command.html#schedule(boolean)">schedule</a>, <a href="Command.html#whenFinished(java.lang.Runnable)">whenFinished</a>, <a href="Command.html#withTimeout(double)">withTimeout</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a id="methods.inherited.from.class.edu.wpi.first.wpilibj.Sendable">
@@ -342,13 +342,13 @@ implements <a href="Command.html" title="interface in edu.wpi.first.wpilibj.expe
  use this unless you fully understand what you are doing.</div>
 </li>
 </ul>
-<a id="clearGroupedCommand(edu.wpi.first.wpilibj.experimental.command.Command)">
+<a id="clearGroupedCommand(edu.wpi.first.wpilibj.frc2.command.Command)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>clearGroupedCommand</h4>
-<pre class="methodSignature">public static&nbsp;void&nbsp;clearGroupedCommand&#8203;(<a href="Command.html" title="interface in edu.wpi.first.wpilibj.experimental.command">Command</a>&nbsp;command)</pre>
+<pre class="methodSignature">public static&nbsp;void&nbsp;clearGroupedCommand&#8203;(<a href="Command.html" title="interface in edu.wpi.first.wpilibj.frc2.command">Command</a>&nbsp;command)</pre>
 <div class="block">Removes a single command from the list of grouped commands, allowing it to be freely
  used again.
 
@@ -360,13 +360,13 @@ implements <a href="Command.html" title="interface in edu.wpi.first.wpilibj.expe
 </dl>
 </li>
 </ul>
-<a id="requireUngrouped(edu.wpi.first.wpilibj.experimental.command.Command...)">
+<a id="requireUngrouped(edu.wpi.first.wpilibj.frc2.command.Command...)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>requireUngrouped</h4>
-<pre class="methodSignature">public static&nbsp;void&nbsp;requireUngrouped&#8203;(<a href="Command.html" title="interface in edu.wpi.first.wpilibj.experimental.command">Command</a>...&nbsp;commands)</pre>
+<pre class="methodSignature">public static&nbsp;void&nbsp;requireUngrouped&#8203;(<a href="Command.html" title="interface in edu.wpi.first.wpilibj.frc2.command">Command</a>...&nbsp;commands)</pre>
 <div class="block">Requires that the specified commands not have been already allocated to a CommandGroup.
    Throws an <code>IllegalUseOfCommandException</code> if commands have been allocated.</div>
 <dl>
@@ -375,23 +375,23 @@ implements <a href="Command.html" title="interface in edu.wpi.first.wpilibj.expe
 </dl>
 </li>
 </ul>
-<a id="addCommands(edu.wpi.first.wpilibj.experimental.command.Command...)">
+<a id="addCommands(edu.wpi.first.wpilibj.frc2.command.Command...)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>addCommands</h4>
-<pre class="methodSignature">public abstract&nbsp;void&nbsp;addCommands&#8203;(<a href="Command.html" title="interface in edu.wpi.first.wpilibj.experimental.command">Command</a>...&nbsp;commands)</pre>
+<pre class="methodSignature">public abstract&nbsp;void&nbsp;addCommands&#8203;(<a href="Command.html" title="interface in edu.wpi.first.wpilibj.frc2.command">Command</a>...&nbsp;commands)</pre>
 </li>
 </ul>
-<a id="sequence(edu.wpi.first.wpilibj.experimental.command.Command...)">
+<a id="sequence(edu.wpi.first.wpilibj.frc2.command.Command...)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>sequence</h4>
-<pre class="methodSignature">public static&nbsp;<a href="CommandGroupBase.html" title="class in edu.wpi.first.wpilibj.experimental.command">CommandGroupBase</a>&nbsp;sequence&#8203;(<a href="Command.html" title="interface in edu.wpi.first.wpilibj.experimental.command">Command</a>...&nbsp;commands)</pre>
-<div class="block">Factory method for <a href="SequentialCommandGroup.html" title="class in edu.wpi.first.wpilibj.experimental.command"><code>SequentialCommandGroup</code></a>, included for brevity/convenience.</div>
+<pre class="methodSignature">public static&nbsp;<a href="CommandGroupBase.html" title="class in edu.wpi.first.wpilibj.frc2.command">CommandGroupBase</a>&nbsp;sequence&#8203;(<a href="Command.html" title="interface in edu.wpi.first.wpilibj.frc2.command">Command</a>...&nbsp;commands)</pre>
+<div class="block">Factory method for <a href="SequentialCommandGroup.html" title="class in edu.wpi.first.wpilibj.frc2.command"><code>SequentialCommandGroup</code></a>, included for brevity/convenience.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>commands</code> - the commands to include</dd>
@@ -400,14 +400,14 @@ implements <a href="Command.html" title="interface in edu.wpi.first.wpilibj.expe
 </dl>
 </li>
 </ul>
-<a id="parallel(edu.wpi.first.wpilibj.experimental.command.Command...)">
+<a id="parallel(edu.wpi.first.wpilibj.frc2.command.Command...)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>parallel</h4>
-<pre class="methodSignature">public static&nbsp;<a href="CommandGroupBase.html" title="class in edu.wpi.first.wpilibj.experimental.command">CommandGroupBase</a>&nbsp;parallel&#8203;(<a href="Command.html" title="interface in edu.wpi.first.wpilibj.experimental.command">Command</a>...&nbsp;commands)</pre>
-<div class="block">Factory method for <a href="ParallelCommandGroup.html" title="class in edu.wpi.first.wpilibj.experimental.command"><code>ParallelCommandGroup</code></a>, included for brevity/convenience.</div>
+<pre class="methodSignature">public static&nbsp;<a href="CommandGroupBase.html" title="class in edu.wpi.first.wpilibj.frc2.command">CommandGroupBase</a>&nbsp;parallel&#8203;(<a href="Command.html" title="interface in edu.wpi.first.wpilibj.frc2.command">Command</a>...&nbsp;commands)</pre>
+<div class="block">Factory method for <a href="ParallelCommandGroup.html" title="class in edu.wpi.first.wpilibj.frc2.command"><code>ParallelCommandGroup</code></a>, included for brevity/convenience.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>commands</code> - the commands to include</dd>
@@ -416,14 +416,14 @@ implements <a href="Command.html" title="interface in edu.wpi.first.wpilibj.expe
 </dl>
 </li>
 </ul>
-<a id="race(edu.wpi.first.wpilibj.experimental.command.Command...)">
+<a id="race(edu.wpi.first.wpilibj.frc2.command.Command...)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>race</h4>
-<pre class="methodSignature">public static&nbsp;<a href="CommandGroupBase.html" title="class in edu.wpi.first.wpilibj.experimental.command">CommandGroupBase</a>&nbsp;race&#8203;(<a href="Command.html" title="interface in edu.wpi.first.wpilibj.experimental.command">Command</a>...&nbsp;commands)</pre>
-<div class="block">Factory method for <a href="ParallelRaceGroup.html" title="class in edu.wpi.first.wpilibj.experimental.command"><code>ParallelRaceGroup</code></a>, included for brevity/convenience.</div>
+<pre class="methodSignature">public static&nbsp;<a href="CommandGroupBase.html" title="class in edu.wpi.first.wpilibj.frc2.command">CommandGroupBase</a>&nbsp;race&#8203;(<a href="Command.html" title="interface in edu.wpi.first.wpilibj.frc2.command">Command</a>...&nbsp;commands)</pre>
+<div class="block">Factory method for <a href="ParallelRaceGroup.html" title="class in edu.wpi.first.wpilibj.frc2.command"><code>ParallelRaceGroup</code></a>, included for brevity/convenience.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>commands</code> - the commands to include</dd>
@@ -432,15 +432,15 @@ implements <a href="Command.html" title="interface in edu.wpi.first.wpilibj.expe
 </dl>
 </li>
 </ul>
-<a id="deadline(edu.wpi.first.wpilibj.experimental.command.Command,edu.wpi.first.wpilibj.experimental.command.Command...)">
+<a id="deadline(edu.wpi.first.wpilibj.frc2.command.Command,edu.wpi.first.wpilibj.frc2.command.Command...)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>deadline</h4>
-<pre class="methodSignature">public static&nbsp;<a href="CommandGroupBase.html" title="class in edu.wpi.first.wpilibj.experimental.command">CommandGroupBase</a>&nbsp;deadline&#8203;(<a href="Command.html" title="interface in edu.wpi.first.wpilibj.experimental.command">Command</a>&nbsp;deadline,
-                                        <a href="Command.html" title="interface in edu.wpi.first.wpilibj.experimental.command">Command</a>...&nbsp;commands)</pre>
-<div class="block">Factory method for <a href="ParallelDeadlineGroup.html" title="class in edu.wpi.first.wpilibj.experimental.command"><code>ParallelDeadlineGroup</code></a>, included for brevity/convenience.</div>
+<pre class="methodSignature">public static&nbsp;<a href="CommandGroupBase.html" title="class in edu.wpi.first.wpilibj.frc2.command">CommandGroupBase</a>&nbsp;deadline&#8203;(<a href="Command.html" title="interface in edu.wpi.first.wpilibj.frc2.command">Command</a>&nbsp;deadline,
+                                        <a href="Command.html" title="interface in edu.wpi.first.wpilibj.frc2.command">Command</a>...&nbsp;commands)</pre>
+<div class="block">Factory method for <a href="ParallelDeadlineGroup.html" title="class in edu.wpi.first.wpilibj.frc2.command"><code>ParallelDeadlineGroup</code></a>, included for brevity/convenience.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>deadline</code> - the deadline command</dd>

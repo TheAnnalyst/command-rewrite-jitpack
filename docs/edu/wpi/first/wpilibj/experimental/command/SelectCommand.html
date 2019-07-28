@@ -116,7 +116,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <!-- ======== START OF CLASS DATA ======== -->
 <main role="main">
 <div class="header">
-<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">edu.wpi.first.wpilibj.experimental.command</a></div>
+<div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">edu.wpi.first.wpilibj.frc2.command</a></div>
 <h2 title="Class SelectCommand" class="title">Class SelectCommand</h2>
 </div>
 <div class="contentContainer">
@@ -124,10 +124,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li><a href="SendableCommandBase.html" title="class in edu.wpi.first.wpilibj.experimental.command">edu.wpi.first.wpilibj.experimental.command.SendableCommandBase</a></li>
+<li><a href="SendableCommandBase.html" title="class in edu.wpi.first.wpilibj.frc2.command">edu.wpi.first.wpilibj.frc2.command.SendableCommandBase</a></li>
 <li>
 <ul class="inheritance">
-<li>edu.wpi.first.wpilibj.experimental.command.SelectCommand</li>
+<li>edu.wpi.first.wpilibj.frc2.command.SelectCommand</li>
 </ul>
 </li>
 </ul>
@@ -138,17 +138,17 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="Command.html" title="interface in edu.wpi.first.wpilibj.experimental.command">Command</a></code>, <code>edu.wpi.first.wpilibj.Sendable</code></dd>
+<dd><code><a href="Command.html" title="interface in edu.wpi.first.wpilibj.frc2.command">Command</a></code>, <code>edu.wpi.first.wpilibj.Sendable</code></dd>
 </dl>
 <hr>
 <pre>public class <span class="typeNameLabel">SelectCommand</span>
-extends <a href="SendableCommandBase.html" title="class in edu.wpi.first.wpilibj.experimental.command">SendableCommandBase</a></pre>
+extends <a href="SendableCommandBase.html" title="class in edu.wpi.first.wpilibj.frc2.command">SendableCommandBase</a></pre>
 <div class="block">Runs one of a selection of commands, either using a selector and a key to command mapping, or a
  supplier that returns the command directly at runtime.  Does not actually schedule the selected
  command - rather, the command is run through this command; this ensures that the command will
  behave as expected if used as part of a CommandGroup.  Requires the requirements of all included
  commands, again to ensure proper functioning when used in a CommandGroup.  If this is undesired,
- consider using <a href="ScheduleCommand.html" title="class in edu.wpi.first.wpilibj.experimental.command"><code>ScheduleCommand</code></a>.
+ consider using <a href="ScheduleCommand.html" title="class in edu.wpi.first.wpilibj.frc2.command"><code>ScheduleCommand</code></a>.
 
  <p>As this command contains multiple component commands within it, it is technically a command
  group; the command instances that are passed to it cannot be added to any other groups, or
@@ -169,10 +169,10 @@ extends <a href="SendableCommandBase.html" title="class in edu.wpi.first.wpilibj
 </a>
 <h3>Field Summary</h3>
 <ul class="blockList">
-<li class="blockList"><a id="fields.inherited.from.class.edu.wpi.first.wpilibj.experimental.command.SendableCommandBase">
+<li class="blockList"><a id="fields.inherited.from.class.edu.wpi.first.wpilibj.frc2.command.SendableCommandBase">
 <!--   -->
 </a>
-<h3>Fields inherited from class&nbsp;edu.wpi.first.wpilibj.experimental.command.<a href="SendableCommandBase.html" title="class in edu.wpi.first.wpilibj.experimental.command">SendableCommandBase</a></h3>
+<h3>Fields inherited from class&nbsp;edu.wpi.first.wpilibj.frc2.command.<a href="SendableCommandBase.html" title="class in edu.wpi.first.wpilibj.frc2.command">SendableCommandBase</a></h3>
 <code><a href="SendableCommandBase.html#m_name">m_name</a>, <a href="SendableCommandBase.html#m_requirements">m_requirements</a>, <a href="SendableCommandBase.html#m_subsystem">m_subsystem</a></code></li>
 </ul>
 </li>
@@ -192,13 +192,13 @@ extends <a href="SendableCommandBase.html" title="class in edu.wpi.first.wpilibj
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.function.Supplier)">SelectCommand</a></span>&#8203;(java.util.function.Supplier&lt;<a href="Command.html" title="interface in edu.wpi.first.wpilibj.experimental.command">Command</a>&gt;&nbsp;toRun)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.function.Supplier)">SelectCommand</a></span>&#8203;(java.util.function.Supplier&lt;<a href="Command.html" title="interface in edu.wpi.first.wpilibj.frc2.command">Command</a>&gt;&nbsp;toRun)</code></th>
 <td class="colLast">
 <div class="block">Creates a new selectcommand.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.Map,java.util.function.Supplier)">SelectCommand</a></span>&#8203;(java.util.Map&lt;java.lang.Object,&#8203;<a href="Command.html" title="interface in edu.wpi.first.wpilibj.experimental.command">Command</a>&gt;&nbsp;commands,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.Map,java.util.function.Supplier)">SelectCommand</a></span>&#8203;(java.util.Map&lt;java.lang.Object,&#8203;<a href="Command.html" title="interface in edu.wpi.first.wpilibj.frc2.command">Command</a>&gt;&nbsp;commands,
              java.util.function.Supplier&lt;java.lang.Object&gt;&nbsp;selector)</code></th>
 <td class="colLast">
 <div class="block">Creates a new selectcommand.</div>
@@ -259,11 +259,11 @@ extends <a href="SendableCommandBase.html" title="class in edu.wpi.first.wpilibj
 </tr>
 </table>
 <ul class="blockList">
-<li class="blockList"><a id="methods.inherited.from.class.edu.wpi.first.wpilibj.experimental.command.SendableCommandBase">
+<li class="blockList"><a id="methods.inherited.from.class.edu.wpi.first.wpilibj.frc2.command.SendableCommandBase">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;edu.wpi.first.wpilibj.experimental.command.<a href="SendableCommandBase.html" title="class in edu.wpi.first.wpilibj.experimental.command">SendableCommandBase</a></h3>
-<code><a href="SendableCommandBase.html#addRequirements(edu.wpi.first.wpilibj.experimental.command.Subsystem...)">addRequirements</a>, <a href="SendableCommandBase.html#getName()">getName</a>, <a href="SendableCommandBase.html#getRequirements()">getRequirements</a>, <a href="SendableCommandBase.html#getSubsystem()">getSubsystem</a>, <a href="SendableCommandBase.html#initSendable(edu.wpi.first.wpilibj.smartdashboard.SendableBuilder)">initSendable</a>, <a href="SendableCommandBase.html#setName(java.lang.String)">setName</a>, <a href="SendableCommandBase.html#setSubsystem(java.lang.String)">setSubsystem</a></code></li>
+<h3>Methods inherited from class&nbsp;edu.wpi.first.wpilibj.frc2.command.<a href="SendableCommandBase.html" title="class in edu.wpi.first.wpilibj.frc2.command">SendableCommandBase</a></h3>
+<code><a href="SendableCommandBase.html#addRequirements(edu.wpi.first.wpilibj.frc2.command.Subsystem...)">addRequirements</a>, <a href="SendableCommandBase.html#getName()">getName</a>, <a href="SendableCommandBase.html#getRequirements()">getRequirements</a>, <a href="SendableCommandBase.html#getSubsystem()">getSubsystem</a>, <a href="SendableCommandBase.html#initSendable(edu.wpi.first.wpilibj.smartdashboard.SendableBuilder)">initSendable</a>, <a href="SendableCommandBase.html#setName(java.lang.String)">setName</a>, <a href="SendableCommandBase.html#setSubsystem(java.lang.String)">setSubsystem</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
@@ -273,11 +273,11 @@ extends <a href="SendableCommandBase.html" title="class in edu.wpi.first.wpilibj
 <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
 </ul>
 <ul class="blockList">
-<li class="blockList"><a id="methods.inherited.from.class.edu.wpi.first.wpilibj.experimental.command.Command">
+<li class="blockList"><a id="methods.inherited.from.class.edu.wpi.first.wpilibj.frc2.command.Command">
 <!--   -->
 </a>
-<h3>Methods inherited from interface&nbsp;edu.wpi.first.wpilibj.experimental.command.<a href="Command.html" title="interface in edu.wpi.first.wpilibj.experimental.command">Command</a></h3>
-<code><a href="Command.html#alongWith(edu.wpi.first.wpilibj.experimental.command.Command...)">alongWith</a>, <a href="Command.html#andThen(edu.wpi.first.wpilibj.experimental.command.Command...)">andThen</a>, <a href="Command.html#asProxy()">asProxy</a>, <a href="Command.html#beforeStarting(java.lang.Runnable)">beforeStarting</a>, <a href="Command.html#cancel()">cancel</a>, <a href="Command.html#deadlineWith(edu.wpi.first.wpilibj.experimental.command.Command...)">deadlineWith</a>, <a href="Command.html#hasRequirement(edu.wpi.first.wpilibj.experimental.command.Subsystem)">hasRequirement</a>, <a href="Command.html#interruptOn(java.util.function.BooleanSupplier)">interruptOn</a>, <a href="Command.html#isScheduled()">isScheduled</a>, <a href="Command.html#perpetually()">perpetually</a>, <a href="Command.html#raceWith(edu.wpi.first.wpilibj.experimental.command.Command...)">raceWith</a>, <a href="Command.html#schedule()">schedule</a>, <a href="Command.html#schedule(boolean)">schedule</a>, <a href="Command.html#whenFinished(java.lang.Runnable)">whenFinished</a>, <a href="Command.html#withTimeout(double)">withTimeout</a></code></li>
+<h3>Methods inherited from interface&nbsp;edu.wpi.first.wpilibj.frc2.command.<a href="Command.html" title="interface in edu.wpi.first.wpilibj.frc2.command">Command</a></h3>
+<code><a href="Command.html#alongWith(edu.wpi.first.wpilibj.frc2.command.Command...)">alongWith</a>, <a href="Command.html#andThen(edu.wpi.first.wpilibj.frc2.command.Command...)">andThen</a>, <a href="Command.html#asProxy()">asProxy</a>, <a href="Command.html#beforeStarting(java.lang.Runnable)">beforeStarting</a>, <a href="Command.html#cancel()">cancel</a>, <a href="Command.html#deadlineWith(edu.wpi.first.wpilibj.frc2.command.Command...)">deadlineWith</a>, <a href="Command.html#hasRequirement(edu.wpi.first.wpilibj.frc2.command.Subsystem)">hasRequirement</a>, <a href="Command.html#interruptOn(java.util.function.BooleanSupplier)">interruptOn</a>, <a href="Command.html#isScheduled()">isScheduled</a>, <a href="Command.html#perpetually()">perpetually</a>, <a href="Command.html#raceWith(edu.wpi.first.wpilibj.frc2.command.Command...)">raceWith</a>, <a href="Command.html#schedule()">schedule</a>, <a href="Command.html#schedule(boolean)">schedule</a>, <a href="Command.html#whenFinished(java.lang.Runnable)">whenFinished</a>, <a href="Command.html#withTimeout(double)">withTimeout</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a id="methods.inherited.from.class.edu.wpi.first.wpilibj.Sendable">
@@ -308,7 +308,7 @@ extends <a href="SendableCommandBase.html" title="class in edu.wpi.first.wpilibj
 <ul class="blockList">
 <li class="blockList">
 <h4>SelectCommand</h4>
-<pre>public&nbsp;SelectCommand&#8203;(java.util.Map&lt;java.lang.Object,&#8203;<a href="Command.html" title="interface in edu.wpi.first.wpilibj.experimental.command">Command</a>&gt;&nbsp;commands,
+<pre>public&nbsp;SelectCommand&#8203;(java.util.Map&lt;java.lang.Object,&#8203;<a href="Command.html" title="interface in edu.wpi.first.wpilibj.frc2.command">Command</a>&gt;&nbsp;commands,
                      java.util.function.Supplier&lt;java.lang.Object&gt;&nbsp;selector)</pre>
 <div class="block">Creates a new selectcommand.</div>
 <dl>
@@ -324,7 +324,7 @@ extends <a href="SendableCommandBase.html" title="class in edu.wpi.first.wpilibj
 <ul class="blockListLast">
 <li class="blockList">
 <h4>SelectCommand</h4>
-<pre>public&nbsp;SelectCommand&#8203;(java.util.function.Supplier&lt;<a href="Command.html" title="interface in edu.wpi.first.wpilibj.experimental.command">Command</a>&gt;&nbsp;toRun)</pre>
+<pre>public&nbsp;SelectCommand&#8203;(java.util.function.Supplier&lt;<a href="Command.html" title="interface in edu.wpi.first.wpilibj.frc2.command">Command</a>&gt;&nbsp;toRun)</pre>
 <div class="block">Creates a new selectcommand.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
