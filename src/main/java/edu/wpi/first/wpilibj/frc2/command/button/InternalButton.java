@@ -5,7 +5,7 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package edu.wpi.first.wpilibj.frc2.buttons;
+package edu.wpi.first.wpilibj.frc2.command.button;
 
 /**
  * This class is intended to be used within a program. The programmer can manually set its value.

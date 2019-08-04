@@ -7,10 +7,10 @@
 
 package edu.wpi.first.wpilibj.frc2.command;
 
-import edu.wpi.first.wpilibj.command.IllegalUseOfCommandException;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import edu.wpi.first.wpilibj.command.IllegalUseOfCommandException;
 
 /**
  * A CommandGroups that runs a list of commands in sequence.

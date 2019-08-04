@@ -1,10 +1,17 @@
-package edu.wpi.first.wpilibj.frc2.command;
+/*----------------------------------------------------------------------------*/
+/* Copyright (c) 2019 FIRST. All Rights Reserved.                             */
+/* Open Source Software - may be modified and shared by FRC teams. The code   */
+/* must be accompanied by the FIRST BSD license file in the root directory of */
+/* the project.                                                               */
+/*----------------------------------------------------------------------------*/
 
-import edu.wpi.first.wpilibj.controller.PIDController;
+package edu.wpi.first.wpilibj.frc2.command;
 
 import java.util.Set;
 import java.util.function.DoubleConsumer;
 import java.util.function.DoubleSupplier;
+
+import edu.wpi.first.wpilibj.controller.PIDController;
 
 import static java.util.Objects.requireNonNull;
 
@@ -14,7 +21,6 @@ import static java.util.Objects.requireNonNull;
  * output are performed synchronously in the command's execute() method.
  */
 public class SynchronousPIDCommand extends SendableCommandBase {
-
   protected final PIDController m_controller;
   protected DoubleSupplier m_measurement;
   protected DoubleSupplier m_setpoint;
@@ -25,14 +31,12 @@ public class SynchronousPIDCommand extends SendableCommandBase {
    *
    * @param controller        the controller that controls the output.
    * @param measurementSource the measurement of the process variable
-   * @param setpointSource   the controller's reference (aka setpoint)
+   * @param setpointSource    the controller's setpoint
    * @param useOutput         the controller's output
    * @param requirements      the subsystems required by this command
    */
-  public SynchronousPIDCommand(PIDController controller,
-                               DoubleSupplier measurementSource,
-                               DoubleSupplier setpointSource,
-                               DoubleConsumer useOutput,
+  public SynchronousPIDCommand(PIDController controller, DoubleSupplier measurementSource,
+                               DoubleSupplier setpointSource, DoubleConsumer useOutput,
                                Subsystem... requirements) {
     requireNonNull(controller);
     requireNonNull(measurementSource);
@@ -47,18 +51,16 @@ public class SynchronousPIDCommand extends SendableCommandBase {
   }
 
   /**
-   * Creates a new SynchronousPIDCommand, which controls the given output with a PIDController with a constant setpoint.
+   * Creates a new SynchronousPIDCommand, which controls the given output with a PIDController.
    *
    * @param controller        the controller that controls the output.
    * @param measurementSource the measurement of the process variable
-   * @param setpoint         the controller's setpoint (aka setpoint)
+   * @param setpoint          the controller's setpoint
    * @param useOutput         the controller's output
    * @param requirements      the subsystems required by this command
    */
-  public SynchronousPIDCommand(PIDController controller,
-                               DoubleSupplier measurementSource,
-                               double setpoint,
-                               DoubleConsumer useOutput,
+  public SynchronousPIDCommand(PIDController controller, DoubleSupplier measurementSource,
+                               double setpoint, DoubleConsumer useOutput,
                                Subsystem... requirements) {
     this(controller, measurementSource, () -> setpoint, useOutput, requirements);
   }
@@ -115,7 +117,8 @@ public class SynchronousPIDCommand extends SendableCommandBase {
   }
 
   /**
-   * Sets the setpoint for the controller to a constant value relative (i.e. added to) the current setpoint.
+   * Sets the setpoint for the controller to a constant value relative (i.e. added to) the current
+   * setpoint.
    *
    * @param relativeReference The change in setpoint
    */

@@ -7,11 +7,11 @@
 
 package edu.wpi.first.wpilibj.frc2.command;
 
-import edu.wpi.first.wpilibj.command.IllegalUseOfCommandException;
-
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+
+import edu.wpi.first.wpilibj.command.IllegalUseOfCommandException;
 
 /**
  * A CommandGroup that runs a set of commands in parallel, ending when the last command ends.

@@ -5,7 +5,7 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package edu.wpi.first.wpilibj.frc2.buttons;
+package edu.wpi.first.wpilibj.frc2.command.button;
 
 import edu.wpi.first.wpilibj.GenericHID;
 

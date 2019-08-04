@@ -1,3 +1,10 @@
+/*----------------------------------------------------------------------------*/
+/* Copyright (c) 2019 FIRST. All Rights Reserved.                             */
+/* Open Source Software - may be modified and shared by FRC teams. The code   */
+/* must be accompanied by the FIRST BSD license file in the root directory of */
+/* the project.                                                               */
+/*----------------------------------------------------------------------------*/
+
 package edu.wpi.first.wpilibj.frc2.command;
 
 import edu.wpi.first.wpilibj.controller.PIDController;
@@ -9,7 +16,6 @@ import static java.util.Objects.requireNonNull;
  * synchronously from the subsystem's periodic() method.
  */
 public abstract class SynchronousPIDSubsystem extends SendableSubsystemBase {
-
   protected final PIDController m_controller;
   protected boolean m_enabled;
 

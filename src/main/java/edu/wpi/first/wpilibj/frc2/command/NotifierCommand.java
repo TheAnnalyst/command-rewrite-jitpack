@@ -7,9 +7,9 @@
 
 package edu.wpi.first.wpilibj.frc2.command;
 
-import edu.wpi.first.wpilibj.Notifier;
-
 import java.util.function.BooleanSupplier;
+
+import edu.wpi.first.wpilibj.Notifier;
 
 /**
  * A command that starts a notifier to run the given runnable periodically in a separate thread.

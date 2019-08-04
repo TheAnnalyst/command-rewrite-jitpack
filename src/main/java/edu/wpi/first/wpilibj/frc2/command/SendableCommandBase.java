@@ -7,11 +7,11 @@
 
 package edu.wpi.first.wpilibj.frc2.command;
 
-import edu.wpi.first.wpilibj.Sendable;
-import edu.wpi.first.wpilibj.smartdashboard.SendableBuilder;
-
 import java.util.HashSet;
 import java.util.Set;
+
+import edu.wpi.first.wpilibj.Sendable;
+import edu.wpi.first.wpilibj.smartdashboard.SendableBuilder;
 
 /**
  * A {@link Sendable} base class for {@link Command}s.
@@ -69,11 +69,11 @@ public abstract class SendableCommandBase implements Sendable, Command {
     builder.addBooleanProperty("running", this::isScheduled, value -> {
       if (value) {
         if (!isScheduled()) {
-          CommandScheduler.getInstance().queueSchedule(this);
+          schedule();
         }
       } else {
         if (isScheduled()) {
-          CommandScheduler.getInstance().queueCancel(this);
+          cancel();
         }
       }
     });

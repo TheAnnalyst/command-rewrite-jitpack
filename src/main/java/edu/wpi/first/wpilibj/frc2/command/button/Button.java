@@ -5,7 +5,9 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package edu.wpi.first.wpilibj.frc2.buttons;
+package edu.wpi.first.wpilibj.frc2.command.button;
+
+import java.util.function.BooleanSupplier;
 
 import edu.wpi.first.wpilibj.frc2.command.Command;
 
@@ -21,6 +23,22 @@ import edu.wpi.first.wpilibj.frc2.command.Command;
  */
 @SuppressWarnings("PMD.TooManyMethods")
 public abstract class Button extends Trigger {
+  /**
+   * Default constructor; creates a button that is never pressed (unless {@link Button#get()} is
+   * overridden).
+   */
+  public Button() {
+  }
+
+  /**
+   * Creates a new button with the given condition determining whether it is pressed.
+   *
+   * @param isPressed returns whether or not the trigger should be active
+   */
+  public Button(BooleanSupplier isPressed) {
+    super(isPressed);
+  }
+
   /**
    * Starts the given command whenever the button is newly pressed.
    *

@@ -5,15 +5,13 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package edu.wpi.first.wpilibj.frc2.buttons;
+package edu.wpi.first.wpilibj.frc2.command.button;
 
-import edu.wpi.first.wpilibj.SendableBase;
+import java.util.function.BooleanSupplier;
+
 import edu.wpi.first.wpilibj.frc2.command.Command;
 import edu.wpi.first.wpilibj.frc2.command.CommandScheduler;
 import edu.wpi.first.wpilibj.frc2.command.InstantCommand;
-import edu.wpi.first.wpilibj.smartdashboard.SendableBuilder;
-
-import java.util.function.BooleanSupplier;
 
 import static java.util.Objects.requireNonNull;
 
@@ -29,8 +27,7 @@ import static java.util.Objects.requireNonNull;
  * method to get the full functionality of the Trigger class.
  */
 @SuppressWarnings("PMD.TooManyMethods")
-public class Trigger extends SendableBase {
-  private volatile boolean m_sendablePressed;
+public class Trigger {
   private final BooleanSupplier m_isActive;
 
   /**
@@ -62,16 +59,6 @@ public class Trigger extends SendableBase {
   }
 
   /**
-   * Returns whether get() return true or the internal table for SmartDashboard use is pressed.
-   *
-   * @return whether get() return true or the internal table for SmartDashboard use is pressed.
-   */
-  @SuppressWarnings("PMD.UselessParentheses")
-  private boolean grab() {
-    return get() || m_sendablePressed;
-  }
-
-  /**
    * Starts the given command whenever the trigger just becomes active.
    *
    * @param command       the command to start
@@ -81,21 +68,20 @@ public class Trigger extends SendableBase {
   public Trigger whenActive(final Command command, boolean interruptible) {
     requireNonNull(command);
 
-    CommandScheduler.getInstance().addButton(
-        new Runnable() {
-          private boolean m_pressedLast = grab();
+    CommandScheduler.getInstance().addButton(new Runnable() {
+      private boolean m_pressedLast = get();
 
-          @Override
-          public void run() {
-            boolean pressed = grab();
+      @Override
+      public void run() {
+        boolean pressed = get();
 
-            if (!m_pressedLast && pressed) {
-              command.schedule(interruptible);
-            }
+        if (!m_pressedLast && pressed) {
+          command.schedule(interruptible);
+        }
 
-            m_pressedLast = pressed;
-          }
-        });
+        m_pressedLast = pressed;
+      }
+    });
 
     return this;
   }
@@ -135,11 +121,11 @@ public class Trigger extends SendableBase {
     requireNonNull(command);
 
     CommandScheduler.getInstance().addButton(new Runnable() {
-      private boolean m_pressedLast = grab();
+      private boolean m_pressedLast = get();
 
       @Override
       public void run() {
-        boolean pressed = grab();
+        boolean pressed = get();
 
         if (pressed) {
           command.schedule(interruptible);
@@ -187,23 +173,22 @@ public class Trigger extends SendableBase {
   public Trigger whileActiveOnce(final Command command, boolean interruptible) {
     requireNonNull(command);
 
-    CommandScheduler.getInstance().addButton(
-        new Runnable() {
-          private boolean m_pressedLast = grab();
+    CommandScheduler.getInstance().addButton(new Runnable() {
+      private boolean m_pressedLast = get();
 
-          @Override
-          public void run() {
-            boolean pressed = grab();
+      @Override
+      public void run() {
+        boolean pressed = get();
 
-            if (!m_pressedLast && pressed) {
-              command.schedule(interruptible);
-            } else if (m_pressedLast && !pressed) {
-              command.cancel();
-            }
+        if (!m_pressedLast && pressed) {
+          command.schedule(interruptible);
+        } else if (m_pressedLast && !pressed) {
+          command.cancel();
+        }
 
-            m_pressedLast = pressed;
-          }
-        });
+        m_pressedLast = pressed;
+      }
+    });
     return this;
   }
 
@@ -228,21 +213,20 @@ public class Trigger extends SendableBase {
   public Trigger whenInactive(final Command command, boolean interruptible) {
     requireNonNull(command);
 
-    CommandScheduler.getInstance().addButton(
-        new Runnable() {
-          private boolean m_pressedLast = grab();
+    CommandScheduler.getInstance().addButton(new Runnable() {
+      private boolean m_pressedLast = get();
 
-          @Override
-          public void run() {
-            boolean pressed = grab();
+      @Override
+      public void run() {
+        boolean pressed = get();
 
-            if (m_pressedLast && !pressed) {
-              command.schedule(interruptible);
-            }
+        if (m_pressedLast && !pressed) {
+          command.schedule(interruptible);
+        }
 
-            m_pressedLast = pressed;
-          }
-        });
+        m_pressedLast = pressed;
+      }
+    });
     return this;
   }
 
@@ -276,25 +260,24 @@ public class Trigger extends SendableBase {
   public Trigger toggleWhenActive(final Command command, boolean interruptible) {
     requireNonNull(command);
 
-    CommandScheduler.getInstance().addButton(
-        new Runnable() {
-          private boolean m_pressedLast = grab();
+    CommandScheduler.getInstance().addButton(new Runnable() {
+      private boolean m_pressedLast = get();
 
-          @Override
-          public void run() {
-            boolean pressed = grab();
+      @Override
+      public void run() {
+        boolean pressed = get();
 
-            if (!m_pressedLast && pressed) {
-              if (command.isScheduled()) {
-                command.cancel();
-              } else {
-                command.schedule(interruptible);
-              }
-            }
-
-            m_pressedLast = pressed;
+        if (!m_pressedLast && pressed) {
+          if (command.isScheduled()) {
+            command.cancel();
+          } else {
+            command.schedule(interruptible);
           }
-        });
+        }
+
+        m_pressedLast = pressed;
+      }
+    });
     return this;
   }
 
@@ -317,21 +300,20 @@ public class Trigger extends SendableBase {
   public Trigger cancelWhenActive(final Command command) {
     requireNonNull(command);
 
-    CommandScheduler.getInstance().addButton(
-        new Runnable() {
-          private boolean m_pressedLast = grab();
+    CommandScheduler.getInstance().addButton(new Runnable() {
+      private boolean m_pressedLast = get();
 
-          @Override
-          public void run() {
-            boolean pressed = grab();
+      @Override
+      public void run() {
+        boolean pressed = get();
 
-            if (!m_pressedLast && pressed) {
-              command.cancel();
-            }
+        if (!m_pressedLast && pressed) {
+          command.cancel();
+        }
 
-            m_pressedLast = pressed;
-          }
-        });
+        m_pressedLast = pressed;
+      }
+    });
     return this;
   }
 
@@ -343,7 +325,7 @@ public class Trigger extends SendableBase {
    * @return the trigger that is active when both triggers are active
    */
   public Trigger and(Trigger trigger) {
-    return new Trigger(() -> grab() && trigger.grab());
+    return new Trigger(() -> get() && trigger.get());
   }
 
   /**
@@ -354,7 +336,7 @@ public class Trigger extends SendableBase {
    * @return the trigger that is active when either trigger is active
    */
   public Trigger or(Trigger trigger) {
-    return new Trigger(() -> grab() || trigger.grab());
+    return new Trigger(() -> get() || trigger.get());
   }
 
   /**
@@ -364,13 +346,6 @@ public class Trigger extends SendableBase {
    * @return the negated trigger
    */
   public Trigger negate() {
-    return new Trigger(() -> !grab());
-  }
-
-  @Override
-  public void initSendable(SendableBuilder builder) {
-    builder.setSmartDashboardType("Button");
-    builder.setSafeState(() -> m_sendablePressed = false);
-    builder.addBooleanProperty("pressed", this::grab, value -> m_sendablePressed = value);
+    return new Trigger(() -> !get());
   }
 }

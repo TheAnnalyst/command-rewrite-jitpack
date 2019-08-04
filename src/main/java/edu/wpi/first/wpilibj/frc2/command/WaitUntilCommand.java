@@ -8,9 +8,9 @@
 package edu.wpi.first.wpilibj.frc2.command;
 
 
-import edu.wpi.first.wpilibj.Timer;
-
 import java.util.function.BooleanSupplier;
+
+import edu.wpi.first.wpilibj.Timer;
 
 import static java.util.Objects.requireNonNull;
 

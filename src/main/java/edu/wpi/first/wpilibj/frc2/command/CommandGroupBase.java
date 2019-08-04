@@ -7,12 +7,12 @@
 
 package edu.wpi.first.wpilibj.frc2.command;
 
-import edu.wpi.first.wpilibj.command.IllegalUseOfCommandException;
-
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Set;
 import java.util.WeakHashMap;
+
+import edu.wpi.first.wpilibj.command.IllegalUseOfCommandException;
 
 /**
  * A base for CommandGroups.  Statically tracks commands that have been allocated to groups

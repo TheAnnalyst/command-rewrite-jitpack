@@ -7,6 +7,17 @@
 
 package edu.wpi.first.wpilibj.frc2.command;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.function.Consumer;
+
 import edu.wpi.first.hal.FRCNetComm.tInstances;
 import edu.wpi.first.hal.FRCNetComm.tResourceType;
 import edu.wpi.first.hal.HAL;
@@ -16,9 +27,6 @@ import edu.wpi.first.wpilibj.SendableBase;
 import edu.wpi.first.wpilibj.command.IllegalUseOfCommandException;
 import edu.wpi.first.wpilibj.smartdashboard.SendableBuilder;
 
-import java.util.*;
-import java.util.function.Consumer;
-
 /**
  * The scheduler responsible for running {@link Command}s.  A Command-based robot should call {@link
  * CommandScheduler#run()} on the singleton instance in its periodic block in order to run commands
@@ -26,7 +34,7 @@ import java.util.function.Consumer;
  * {@link CommandScheduler#registerSubsystem(Subsystem...)} in order for their {@link
  * Subsystem#periodic()} methods to be called and for their default commands to be scheduled.
  */
-@SuppressWarnings({"PMD.GodClass", "PMD.TooManyMethods"})
+@SuppressWarnings({"PMD.GodClass", "PMD.TooManyMethods", "PMD.TooManyFields"})
 public final class CommandScheduler extends SendableBase {
   /**
    * The Singleton Instance.
