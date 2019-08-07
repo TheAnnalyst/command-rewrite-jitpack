@@ -1,2 +1,3 @@
-edu.wpi.first.wpilibj.frc2.buttons
+edu.wpi.first.wpilibj.controller
 edu.wpi.first.wpilibj.frc2.command
+edu.wpi.first.wpilibj.frc2.command.button
