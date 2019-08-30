@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"edu.wpi.first.wpilibj.controller"},{"l":"edu.wpi.first.wpilibj.frc2.command"},{"l":"edu.wpi.first.wpilibj.frc2.command.button"}]
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"edu.wpi.first.wpilibj.controller"},{"l":"edu.wpi.first.wpilibj.util"},{"l":"edu.wpi.first.wpilibj2.command"},{"l":"edu.wpi.first.wpilibj2.command.button"}]
