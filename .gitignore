@@ -1,0 +1,6 @@
+.gradle/*
+.idea/*
+.settings/*
+*.class
+.classpath
+.project
